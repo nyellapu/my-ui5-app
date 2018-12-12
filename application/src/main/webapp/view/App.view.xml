@@ -1,7 +1,8 @@
 <mvc:View
 	displayBlock="true"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.m">
+	xmlns="sap.m"
+    controllerName="mckesson.eu.my-ui5-app.controller.App">
 	<Carousel>
 		<pages>
 			<Image src="https://images.pexels.com/photos/38537/woodland-road-falling-leaf-natural-38537.jpeg" height="600px"/>
@@ -15,4 +16,7 @@
 			<Image src="https://images.pexels.com/photos/207997/pexels-photo-207997.jpeg" height="600px"/>
 		</pages>
 	</Carousel>
+    <Button
+		text="Say Hello!"
+		press="onShowHello"/>
 </mvc:View>
