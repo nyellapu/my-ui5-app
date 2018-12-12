@@ -9,7 +9,18 @@
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
+		},
+		"dataSources": {
+			"ES5": {
+				"uri": "https://sapes5.sapdevcenter.com/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"headers" : {"Authorization":"UzAwMTEwNDI5NjA6U2lWcFE0S1FqN01zMnZt"}
+				}
+			}
 		}
+
 	},
 	"sap.ui": {
 		"_version": "1.3.0",
@@ -40,6 +51,9 @@
 			"helloPanel": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/HelloPanel.json"
+			},
+			"" : {
+			"dataSource": "ES5"
 			},
 			"address": {
 				"type": "sap.ui.model.json.JSONModel",
