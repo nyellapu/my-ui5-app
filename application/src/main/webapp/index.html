@@ -20,8 +20,8 @@
 
 		<script>
 			sap.ui.getCore().attachInit(function () {
-				sap.ui.xmlview({
-				viewName: "mckesson.eu.my-ui5-app.view.App"
+				new sap.ui.core.ComponentContainer({
+                    name: "mckesson.eu.my-ui5-app"
 			}).placeAt("content");
 			});
         </script>
