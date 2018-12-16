@@ -96,7 +96,10 @@
 												sorter : {
 															path : 'Category',
 															group : true
-														}
+														},
+												parameters : {
+													expand : 'ToSupplier'
+												}
 												}"
 									growing="true"
 									growingThreshold="5"
@@ -136,6 +139,12 @@
 														formatter : '.formatter.delivery'
 													}"/>
 									</firstStatus>
+									<secondStatus>
+										<ObjectStatus
+											title="{i18n>deliveredFrom}"
+											text="{ToSupplier/Address/City}"
+										/>
+									</secondStatus>
 
 								</ObjectListItem>
 						</items>
