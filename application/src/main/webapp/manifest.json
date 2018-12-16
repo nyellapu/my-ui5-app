@@ -16,7 +16,10 @@
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0",
-					"headers" : {"Authorization":"UzAwMTEwNDI5NjA6U2lWcFE0S1FqN01zMnZt"}
+					"headers" : {"Authorization":"UzAwMTEwNDI5NjA6U2lWcFE0S1FqN01zMnZt",
+								"Access-Control-Allow-Origin":"*",
+								"Access-Control-Allow-Headers":"*"
+					}
 				}
 			}
 		}
@@ -53,7 +56,16 @@
 				"uri": "model/HelloPanel.json"
 			},
 			"" : {
-			"dataSource": "ES5"
+			"dataSource": "ES5",
+			"settings": {						
+				"headers" : {"Authorization":"Basic UzAwMTEwNDI5NjA6U2lWcFE0S1FqN01zMnZt",
+							 "X-CSRF-Token": "Fetch",
+							 "Access-Control-Allow-Origin":"*",
+							 "Access-Control-Allow-Headers":"*"	
+							}
+			},
+			"disableHeadRequestForToken": true,
+			"useBatch": false
 			},
 			"address": {
 				"type": "sap.ui.model.json.JSONModel",

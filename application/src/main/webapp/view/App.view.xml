@@ -97,7 +97,12 @@
 															path : 'Category',
 															group : true
 														}
-												}">
+												}"
+									growing="true"
+									growingThreshold="5"
+									growingScrollToLoad="false"
+									mode="SingleSelectMaster"
+									selectionChange="onItemSelected">
 									<headerToolbar>
 										<Toolbar>
 											<Title text="{i18n>productListTitle}"/>
@@ -135,6 +140,16 @@
 								</ObjectListItem>
 						</items>
 					</List>
+					<Panel id="productDetailsPanel"
+						   headerText="Product Details"
+						   visible="false">
+						<l:Grid>
+							<Text text="Product ID:  {ProductID}"/>
+							<Text text="Product Name:  {Name}"/>
+							<Text text="Description:  {Description}"/>
+							<Text text="Price:  {Price}"/>
+						</l:Grid>
+					</Panel>
 				</content>
 			</IconTabFilter>
 
